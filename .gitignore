@@ -1,3 +1,5 @@
+#prodution file
+raspal/settings/production.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

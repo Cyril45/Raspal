@@ -16,13 +16,13 @@ class Flux(threading.Thread):
     def run(self):
         """Image update loop."""
         while True:
-            time.sleep(0.02)  # Limitation de la vitesse de la boucle a 100fps
+            time.sleep(0.01)  
             (self.grabbed, self.frame) = self.video.read()
 
     def get_frame(self):
         """Retrieve a readable image for html5 img tag."""
         while True:
-            time.sleep(0.02)
+            time.sleep(0.01)
             ret, jpeg = cv2.imencode('.jpg', self.frame)
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() +

@@ -19,15 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['KEY']
+SECRET_KEY = 'Z|]<ce)%^g(j`36}kz`<6oN/Mgx0c+ y!9Qo?b~t74aK_4GWAggz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-if DEBUG:
-    ALLOWED_HOSTS = ["127.0.0.1"]
-else:
-    ALLOWED_HOSTS = [os.environ['HOSTAPP']]
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -80,10 +77,10 @@ WSGI_APPLICATION = 'raspal.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ['NAME_DB'],
-        'USER': os.environ['USER_DB'],
-        'PASSWORD': os.environ['PASSWORD_DB'],
-        'HOST': os.environ['HOST_DB'],
+        'NAME': 'name_DB',
+        'USER': 'User_DB'',
+        'PASSWORD': 'PASSWORD_DB',
+        'HOST': 'HOST_DB',
         'PORT': '5432',
     }
 }
@@ -132,15 +129,15 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'account.MyUser'
 
 # Path to video saving
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 # Alarme var activated or no
 ALARME = False
 # URL authentification
 LOGIN_URL = 'account:sign_in'
 
 # Configuration for SMTP
-EMAIL_HOST = os.environ['SERVEUR']
-EMAIL_USE_TLS = os.environ['USE_TLS']
-EMAIL_PORT = os.environ['PORT']
-EMAIL_HOST_USER = os.environ['EMAIL']
-EMAIL_HOST_PASSWORD = os.environ['PASSWORD_EMAIL']
+EMAIL_HOST = 'SERVEUR'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'YOUR_EMAIL'
+EMAIL_HOST_PASSWORD = 'PASSWORD_EMAIL'
