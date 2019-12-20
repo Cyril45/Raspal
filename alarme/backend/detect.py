@@ -29,7 +29,7 @@ class Detect(Thread):
                     self.move = True
                     if not self.submit_mail:
                         subject = "ALARME: Détection de mouvement !"
-                        message = "Il y a actuellement une activation de l'alarme\nURL de l'alarme:http://{}:8000".format(settings.ALLOWED_HOSTS[0])
+                        message = "Il y a actuellement une activation de l'alarme\nURL de l'alarme:http://{}".format(settings.ALLOWED_HOSTS[0])
                         email = MyUser.objects.all().values_list('email')
                         email_list = [e[0] for e in email]
                         send = Sendmail()

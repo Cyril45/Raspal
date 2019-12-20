@@ -132,7 +132,7 @@ def retrieve_password(request):
             user.save()
 
             subject = 'Rappel de vos identifiants d\'alarme'
-            message = 'Votre nom d\'utilisateur est: {} \nVotre mot de passe à été réinitialiser avec le mot de passe suivant: {}\nUrl de connexion: http://{}:8000'.format(user, random_password, settings.ALLOWED_HOSTS[0])
+            message = 'Votre nom d\'utilisateur est: {} \nVotre mot de passe à été réinitialiser avec le mot de passe suivant: {}\nUrl de connexion: http://{}'.format(user, random_password, settings.ALLOWED_HOSTS[0])
             send = Sendmail()
             send.sendmail(email, subject, message)
             return redirect('/')
