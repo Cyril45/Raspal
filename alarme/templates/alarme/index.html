@@ -1,0 +1,35 @@
+{% extends "alarme/base.html" %}
+{% block content %}
+<div class="container m-5 mx-auto text-center">
+    <div class="row my-5">
+        <div class="col">
+            <h4>Bienvenue {{user.first_name}} tu es sur l’interface de gestion de l'alarme</h4>
+        </div>
+    </div>
+    <div class="row my-2 text-center">
+        <div class="col">
+            {% if alarme %}
+                <p>L'alarme est actuellement activée</p>
+                </div>
+                <div class="col">
+                    <a href="{% url 'alarme:alarme' 'desactivate' %}">
+                        <button type="button" class="btn btn-secondary">Désactiver l'alarme</button>
+                    </a>
+                </div>
+            {% else %}
+                <p>L'alarme n'est pas activée actuellement</p>
+                </div>
+                <div class="col">
+                    <a href="{% url 'alarme:alarme' 'activate' %}">
+                        <button type="button" class="btn btn-secondary">Activer l'alarme</button>
+                    </a>
+                </div>
+            {% endif %}
+    </div>
+    <div class="row my-3">
+        <div class="col">
+            <img src="{% url 'alarme:views_live' %}" class="img-fluid rounded  mx-auto" alt="Responsive image">
+        </div>
+    </div>
+</div>
+{% endblock content %}

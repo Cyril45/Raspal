@@ -1,0 +1,86 @@
+{% extends "alarme/base.html" %}
+{% block content %}
+
+
+<div class="container mx-auto m-5">
+    <div class="row">
+        <div class="col-12">
+            <h4>Pages d'administration des comptes utilisateurs</h4>
+        </div>
+    </div>
+    <div class="my-5">
+        <div class="row">
+            <div class="col-6">
+                <p class="text-left font-weight-bold">Liste des comptes utilisateurs</p>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-dark m-0 rounded">
+                <tbody>
+                    <tr>
+                        <th scope="col">ID</td>
+                        <th scope="col">Username</td>
+                        <th scope="col">Nom</td>
+                        <th scope="col">Prenom</td>
+                        <th scope="col">Email</td>
+                        <th scope="col"></td>
+                    </tr>
+                {% for users in list_users %}
+                    {% if not users.is_superuser %}
+                    <tr>
+                        <td>{{users.id}}</td>
+                        <td>{{users}}</td>
+                        <td>{{ users.last_name }}</td>
+                        <td>{{ users.first_name }}</td>
+                        <td>{{ users.email }}</td>
+                        <td><a class="btn btn-danger" href="{% url 'administration:remove_user' users.id %}">Supprimer l'utilisateur</a></td>
+                    </tr>
+                    {%endif%}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-6 text-left">
+                <a class="btn btn-info" href="{% url 'administration:creating_user' %}">Créer un nouvel utilisateur</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="my-5">
+        <div class="row">
+            <div class="col-6">
+                <p class="text-left font-weight-bold">Liste des comptes administrateurs</p>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-dark m-0 rounded">
+                <tbody>
+                    <tr>
+                        <th scope="col">ID</td>
+                        <th scope="col">Username</td>
+                        <th scope="col">Nom</td>
+                        <th scope="col">Prenom</td>
+                        <th scope="col">Email</td>
+                    </tr>
+                {% for users in list_users %}
+                    {% if users.is_superuser %}
+                    <tr>
+                        <td>{{users.id}}</td>
+                        <td>{{users}}</td>
+                        <td>{{ users.last_name }}</td>
+                        <td>{{ users.first_name }}</td>
+                        <td>{{ users.email }}</td>
+                    </tr>
+                    {%endif%}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}

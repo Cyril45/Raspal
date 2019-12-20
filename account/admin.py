@@ -1,0 +1,1 @@
+"""Django administration module."""
