@@ -53,7 +53,7 @@ def creating_user(request):
                 usercreated.save()
 
                 subject = 'Compte d\'alarme créer'
-                message = 'Votre compte d\'alarme à été creer votre nom d\'utilisateur est: {} \nVotre mot de passe est le suivant: {}\nUrl de connexion: http://{}'.format(username, password, settings.ALLOWED_HOSTS[0])
+                message = 'Votre compte d\'alarme à été créé votre nom d\'utilisateur est: {} \nVotre mot de passe est le suivant: {}\nUrl de connexion: http://{}'.format(username, password, settings.ALLOWED_HOSTS[0])
                 send = Sendmail()
                 send.sendmail(email, subject, message)
                 return redirect('/administration/')
