@@ -15,7 +15,9 @@ RaspAl est un système d’alarme connecter, avec enregistrement vidéo, il fait
 Les utilisateurs ont accès au paramètre de l’alarme depuis l’interface web, ils pourront:
 
 Télécharger/visualiser les vidéos déjà enregistrées
+
 Visionner la caméra en direct
+
 Activer et désactiver l’alarme depuis l’interface RaspAl, un email leurs sera envoyer en cas de détéction
 
 
@@ -25,4 +27,5 @@ Les dependances nécéssaire à l'application sont disponible dans le fichier **
 
 ## Installation
 
-L'installation étant assez conséquente un dossier d'exploitation est fournie dans le dossier **Doc**
+Afin de proceder à l'installation veillez vous referez au dossier d'exploitation **Doc\\Projet Raspal- Dossier d'exploitation.pdf**
+
