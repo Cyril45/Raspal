@@ -1,7 +1,3 @@
-# P13-Raspal-
-L'alarme pour raspberry
-
-
 <h1 align="center"> Raspal </h1>
 
 <h2 align="center">Raspal l'alarme connecté à moins de 50 euros</h2>
