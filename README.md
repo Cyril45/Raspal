@@ -6,7 +6,7 @@ L'alarme pour raspberry
 
 <h2 align="center">Raspal l'alarme connecté à moins de 50 euros</h2>
 
-<p align="center"><img src="doc/interface.png"></p>
+<p align="center"><img src="Doc/interface.png"></p>
 
 
 ## Caractéristiques
