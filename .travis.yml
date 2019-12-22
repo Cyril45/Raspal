@@ -7,6 +7,9 @@ install:
 
 env:
   - DJANGO_SETTINGS_MODULE=raspal.settings.travis
+  
+services:
+  - postgresql
 
 script:
   python manage.py test
