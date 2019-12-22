@@ -17,7 +17,6 @@ services:
   - postgresql
 
 script:
-  - python travis_config_fake_rasp.py
   - python manage.py makemigrations
   - python manage.py migrate
   - python manage.py test
