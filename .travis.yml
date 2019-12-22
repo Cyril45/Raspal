@@ -9,7 +9,7 @@ before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   
 before_install:
-  - DJANGO_SETTINGS_MODULE=raspal.settings.travis
+  - export DJANGO_SETTINGS_MODULE=raspal.settings.travis
   
 services:
   - postgresql
