@@ -4,6 +4,8 @@ python:
   - "3.7"
 install:
   - pip install -r requirements.txt
+  - pip install fake_rpi
+  -
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
@@ -15,6 +17,7 @@ services:
   - postgresql
 
 script:
+  - python travis_config_fake_rasp.py
   - python manage.py makemigrations
   - python manage.py migrate
   - python manage.py test
