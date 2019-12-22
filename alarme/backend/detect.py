@@ -5,7 +5,7 @@ from account.models import MyUser
 from .sendmail import Sendmail
 from django.conf import settings
 
-if setting.TRAVIS == True:
+if settings.TRAVIS == True:
     import sys
     import fake_rpi
     sys.modules['RPi'] = fake_rpi.RPi
