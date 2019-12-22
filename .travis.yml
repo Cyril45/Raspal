@@ -9,4 +9,4 @@ env:
   - DJANGO_SETTINGS_MODULE=raspal.settings.travis
 
 script:
-  ./manage.py test
+  python manage.py test
