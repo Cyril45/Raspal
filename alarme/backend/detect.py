@@ -1,10 +1,17 @@
 """Main base of the detector."""
 from threading import Thread
-import RPi.GPIO as GPIO
 import time
 from account.models import MyUser
 from .sendmail import Sendmail
 from django.conf import settings
+
+if setting.TRAVIS == True:
+    import sys
+    import fake_rpi
+    sys.modules['RPi'] = fake_rpi.RPi
+    sys.modules['RPi.GPIO'] = fake_rpi.RPi.GPIO
+else:
+    import RPi.GPIO as GPIO
 
 
 class Detect(Thread):
