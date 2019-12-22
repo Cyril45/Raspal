@@ -23,7 +23,7 @@ SECRET_KEY = 'Z|]<ce)%^g(j`36}kz`<6oN/Mgx0c+ y!9Qo?b~t74aK_4GWAggz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+TRAVIS = False
 ALLOWED_HOSTS = ["127.0.0.1"]
 
 
