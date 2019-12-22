@@ -3,7 +3,7 @@ from . import *
 # django appication config
 SECRET_KEY = 'qsdgfsghkjghkglkrdtyqsfqsfqsdjdghjfghgb'
 DEBUG = False
-
+TRAVIS = True
 
 # django Databases config
 DATABASES = {
