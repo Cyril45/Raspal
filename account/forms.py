@@ -6,7 +6,7 @@ class Signin(forms.Form):
     """Contain the authentication form."""
 
     username = forms.CharField(
-        label='Nom d\'utilsiateur',
+        label='Nom d\'utilisateur',
         max_length=25,
         widget=forms.TextInput(
             attrs={'class': 'form-control'}
