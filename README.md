@@ -1,9 +1,8 @@
 <h1 align="center"> Raspal </h1>
 
-<h2 align="center">L'alarme connectée à moins de 50 euros</h2>
-
 <p align="center"><img src="Doc/interface.png"></p>
 
+<h2 align="center">L'alarme connectée à moins de 50 euros</h2>
 
 ## Caractéristiques
 RaspAl est un système d’alarme connectée, avec enregistrement vidéo, il fait suite à une demande croissante de sécurité pour les particuliers qui souhaite s’équiper d’alarme pour un prix raisonnable.
