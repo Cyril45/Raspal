@@ -18,7 +18,7 @@ class Command(BaseCommand):
         try:
             user_delete = MyUser.objects.get(username=username_select)
             user_delete.delete()
-            print"L'utilisateur "+username_select+" a bien été supprimer")
+            print("L'utilisateur "+username_select+" a bien été supprimer")
         except MyUser.DoesNotExist:
             print("Ce nom d'utilisateur n'existe pas.")
 
